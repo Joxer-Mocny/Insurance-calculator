@@ -20,13 +20,23 @@
             Na dni
           </mat-button-toggle>
         </div>
-        <p [hidden]="!inboundClick"><mat-card style="background-color: grey; color: black;">Sumar na dni</mat-card></p>
-        <p [hidden]="inboundClick"><mat-card style="background-color: grey; color: black;">Sumar na rok</mat-card></p>
+        <p [hidden]="!inboundClick">
+          <mat-card style="background-color: grey; color: black"
+            >Sumar na dni</mat-card
+          >
+        </p>
+        <p [hidden]="inboundClick">
+          <mat-card style="background-color: grey; color: black"
+            >Sumar na rok</mat-card
+          >
+        </p>
       </div>
 
       <div class="packages">
         <p [hidden]="!inboundClick">
-          <mat-card style="background-color: grey; color: black;">Baliky</mat-card>
+          <mat-card style="background-color: grey; color: black"
+            >Baliky</mat-card
+          >
           <mat-button-toggle (click)="writeToInput('1.2')"
             >Zakladny balik = 1.2€ /den</mat-button-toggle
           >
@@ -38,7 +48,9 @@
           >
         </p>
         <p [hidden]="inboundClick">
-          <mat-card style="background-color: grey; color: black;">Baliky</mat-card>
+          <mat-card style="background-color: grey; color: black"
+            >Baliky</mat-card
+          >
           <mat-button-toggle (click)="writeToInput('39')"
             >Zakladny Balik = 39€</mat-button-toggle
           >
@@ -51,7 +63,9 @@
         </p>
 
         <div class="People">
-          <mat-card style="background-color: grey; color: black;">Pocet ludi</mat-card>
+          <mat-card style="background-color: grey; color: black"
+            >Pocet ludi</mat-card
+          >
           <mat-button-toggle (click)="writeToInput('*')"
             >pridat cloveka</mat-button-toggle
           >
@@ -65,7 +79,9 @@
 
         <div class="days">
           <p [hidden]="!inboundClick">
-            <mat-card style="background-color: grey; color: black;">Dni</mat-card>
+            <mat-card style="background-color: grey; color: black"
+              >Dni</mat-card
+            >
 
             <mat-button-toggle-group>
               <mat-button-toggle (click)="writeToInput('*')"
@@ -121,7 +137,9 @@
 
         <div class="special">
           <p [hidden]="!inboundClick">
-            <mat-card style="background-color: grey; color: black;">Doplnky</mat-card>
+            <mat-card style="background-color: grey; color: black"
+              >Doplnky</mat-card
+            >
             <mat-button-toggle-group>
               <mat-button-toggle (click)="writeToInputSpec('*0.5')"
                 >storno cesty +50%</mat-button-toggle
@@ -138,7 +156,9 @@
       </div>
       <div class="special">
         <p [hidden]="inboundClick">
-          <mat-card style="background-color: grey; color: black;">Doplnky</mat-card>
+          <mat-card style="background-color: grey; color: black"
+            >Doplnky</mat-card
+          >
           <mat-button-toggle-group>
             <mat-button-toggle (click)="writeToInputSpec('*0.2')"
               >storno cesty +20%</mat-button-toggle
@@ -166,7 +186,7 @@
 
       <mat-button-toggle
         (click)="!(ClickHideButton2 = !ClickHideButton2)"
-        (click)="inputCelkomshow()" 
+        (click)="inputCelkomshow()"
         >Dokopy</mat-button-toggle
       >
       <div class="btn-clear-sumar">
@@ -178,7 +198,7 @@
             id="clear"
             (click)="!(ClickHideButton1 = !ClickHideButton1)"
             (click)="!(ClickHideButton2 = !ClickHideButton2)"
-            (click)="clear()"
+            (click)="refresh()"
             >zmazat vsetko</mat-button-toggle
           >
         </mat-button-toggle-group>
@@ -187,14 +207,14 @@
   >
   <mat-grid-tile>
     <div class="ShowSumar">
-      <mat-card style="background-color: grey; color: black;"
+      <mat-card style="background-color: grey; color: black"
         ><h1>
           Zakladne baliky
           <div>
             <input [(ngModel)]="toShow" name="days" type="text" />
           </div></h1
       ></mat-card>
-      <mat-card style="background-color: grey; color: black;">
+      <mat-card style="background-color: grey; color: black">
         <h1>
           Doplnky
           <div [hidden]="ClickHideButton1">
@@ -202,7 +222,7 @@
           </div>
         </h1>
       </mat-card>
-      <mat-card style="background-color: grey; color: black;"
+      <mat-card style="background-color: grey; color: black"
         ><h1>
           Dokopy
           <div [hidden]="ClickHideButton2">

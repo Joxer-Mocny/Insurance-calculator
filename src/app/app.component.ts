@@ -23,14 +23,9 @@ export class AppComponent {
   curValSpec = '';
   curValSpecTotal = '';
   // for deleting stuff
-  clear() {
-    this.toShowSumarTotal = '';
-    this.toShowSumar = '';
-    this.toSumar = '';
-    this.toShow = '';
-    this.curVal = '';
-    this.curValSpec = '';
-    this.curValSpecTotal = '';
+
+  refresh(): void {
+    window.location.reload();
   }
 
   back() {
@@ -70,6 +65,4 @@ export class AppComponent {
     this.curValSpecTotal = this.curValSpec + this.curVal;
     this.toShowSumarTotal = this.curValSpecTotal;
   }
- 
-
 }
