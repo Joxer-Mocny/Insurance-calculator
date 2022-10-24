@@ -9,11 +9,12 @@ import { __values } from 'tslib';
 export class AppComponent {
   title = 'Insurance-calculator';
 
-
+  // change visibility
   inboundClick = true || false;
-  ClickHideButton = true || false;
-  
+  ClickHideButton1 = true || false;
+  ClickHideButton2 = true || false;
 
+  // for showing in input
   toShowSumarTotal = '';
   toShowSumar = '';
   toSumar = '';
@@ -21,9 +22,9 @@ export class AppComponent {
   curVal = '';
   curValSpec = '';
   curValSpecTotal = '';
-  
+  // for deleting stuff
   clear() {
-    this. toShowSumarTotal = '';
+    this.toShowSumarTotal = '';
     this.toShowSumar = '';
     this.toSumar = '';
     this.toShow = '';
@@ -32,18 +33,19 @@ export class AppComponent {
     this.curValSpecTotal = '';
   }
 
-  back(){
-    this.curVal = this.curVal.slice(0,-1)
-    this.toShow = this.curVal
+  back() {
+    this.curVal = this.curVal.slice(0, -1);
+    this.toShow = this.curVal;
   }
-  back1(){
+  back1() {
     this.toShowSumar = '';
   }
 
-  back2(){
-    this. toShowSumarTotal = '';
+  back2() {
+    this.toShowSumarTotal = '';
   }
 
+  // calculating values
   writeToInput(value?: any) {
     this.curVal = this.curVal + value;
     this.toShow = this.curVal;
@@ -64,9 +66,10 @@ export class AppComponent {
     this.curValSpec = this.toShowSumar;
   }
 
-  inputCelkomshow(value?: string) {
-    this.curValSpecTotal = this.curValSpec + this.curVal ;
+  inputCelkomshow(value?: any) {
+    this.curValSpecTotal = this.curValSpec + this.curVal;
     this.toShowSumarTotal = this.curValSpecTotal;
   }
+ 
 
 }
