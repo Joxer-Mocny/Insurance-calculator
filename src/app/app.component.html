@@ -33,60 +33,100 @@
       </div>
 
       <div class="packages">
-        <p [hidden]="!inboundClick">
+        <section [hidden]="!inboundClick">
           <mat-card style="background-color: grey; color: black"
             >Baliky</mat-card
           >
-          <mat-button-toggle (click)="writeToInput('1.2')"
+          <p [hidden]="!NonClickButton">
+          <mat-button-toggle  type="button"
+          class="more-styles"
+          (click)="!(NonClickButton = !NonClickButton)" (click)="writeToInput('1.2')"
             >Zakladny balik = 1.2€ /den</mat-button-toggle
           >
-          <mat-button-toggle (click)="writeToInput('1.8')"
+            
+          <mat-button-toggle  type="button"
+          class="more-styles"
+          (click)="!(NonClickButton = !NonClickButton)" (click)="writeToInput('1.8')"
             >rozsireny balik = 1.8€/den</mat-button-toggle
           >
-          <mat-button-toggle (click)="writeToInput('2.4')"
+          <mat-button-toggle  type="button"
+          class="more-styles"
+          (click)="!(NonClickButton = !NonClickButton)" (click)="writeToInput('2.4')"
             >extra balik = 2.4€/den</mat-button-toggle
-          >
-        </p>
-        <p [hidden]="inboundClick">
+          ></p>
+          <p [hidden]="NonClickButton">
+            <mat-button-toggle type="button"
+            class="more-styles" (click)="!(NonClickButton = !NonClickButton)" (click)="back3()" >Zmazat balik</mat-button-toggle>
+          </p>
+        </section>
+
+
+        <section [hidden]="inboundClick">
           <mat-card style="background-color: grey; color: black"
             >Baliky</mat-card
-          >
-          <mat-button-toggle (click)="writeToInput('39')"
+          ><p [hidden]="!NonClickButton">
+          <mat-button-toggle  type="button"
+          class="more-styles"
+          (click)="!(NonClickButton = !NonClickButton)" (click)="writeToInput('39')"
             >Zakladny Balik = 39€</mat-button-toggle
           >
-          <mat-button-toggle (click)="writeToInput('49')"
+          <mat-button-toggle  type="button"
+          class="more-styles"
+          (click)="!(NonClickButton = !NonClickButton)" (click)="writeToInput('49')"
             >Rozsireny Balik = 49€</mat-button-toggle
           >
-          <mat-button-toggle (click)="writeToInput('59')"
+          <mat-button-toggle  type="button"
+          class="more-styles"
+          (click)="!(NonClickButton = !NonClickButton)" (click)="writeToInput('59')"
             >Zakladny Balik = 59€</mat-button-toggle
           >
         </p>
+        <p [hidden]="NonClickButton">
+          <mat-button-toggle type="button"
+          class="more-styles" (click)="!(NonClickButton = !NonClickButton)" (click)="back3()" >Zmazat balik</mat-button-toggle>
+        </p>
+        </section>
 
         <div class="People">
           <mat-card style="background-color: grey; color: black"
             >Pocet ludi</mat-card
           >
-          <mat-button-toggle (click)="writeToInput('*')"
-            >pridat cloveka</mat-button-toggle
+          <mat-button-toggle (click)="writeToInput('*1')"
+            >Jeden clovek</mat-button-toggle
           >
-          <mat-button-toggle (click)="writeToInput('2')"
+          <mat-button-toggle (click)="writeToInput('*2')"
             >Dva ludia</mat-button-toggle
           >
-          <mat-button-toggle (click)="writeToInput('3')"
+          <mat-button-toggle (click)="writeToInput('*3')"
             >Traja ludia</mat-button-toggle
           >
         </div>
 
         <div class="days">
-          <p [hidden]="!inboundClick">
+          <section [hidden]="!inboundClick">
             <mat-card style="background-color: grey; color: black"
               >Dni</mat-card
             >
-
             <mat-button-toggle-group>
-              <mat-button-toggle (click)="writeToInput('*')"
-                >Pocet dni</mat-button-toggle
-              >
+            
+              <!-- tu sa to dojebalo  -->
+                <div [hidden]="!NonCLickButton2">
+                  <mat-button-toggle-group>
+              <mat-button-toggle type="button"
+              class="more-styles" (click)="!(NonCLickButton2 = !NonCLickButton2)" (click)="writeToInput('*')"
+                >Pocet dni</mat-button-toggle>
+              </mat-button-toggle-group>
+              </div>
+              <div [hidden]="NonCLickButton2">
+                <mat-button-toggle-group>
+            <mat-button-toggle type="button"
+            class="more-styles" (click)="!(NonCLickButton2 = !NonCLickButton2)"
+              >Pocet dni</mat-button-toggle>
+            </mat-button-toggle-group>
+            </div>
+            <div [hidden]="NonCLickButton2">
+              <mat-button-toggle-group>
+            
               <mat-button-toggle (click)="writeToInput('1')"
                 >1</mat-button-toggle
               >
@@ -118,21 +158,32 @@
                 >0</mat-button-toggle
               >
             </mat-button-toggle-group>
-          </p>
+          </div>
+           
+            </mat-button-toggle-group>
+          </section>
+          <mat-button-toggle
+          id="sumar"
+          type="button"
+          class="more-styles"
+          (click)="show()"
+          >Potvrdit balik</mat-button-toggle
+        >
           <mat-button-toggle
             [hidden]="!inboundClick"
             id="back"
             (click)="back()"
           >
-            zmazat balik ludi a dni
+            zmazat
           </mat-button-toggle>
           <mat-button-toggle
-            id="sumar"
-            type="button"
-            class="more-styles"
-            (click)="show()"
-            >Potvrdit balik</mat-button-toggle
-          >
+          [hidden]="!inboundClick"
+          id="back"  type="button"
+          class="more-styles" (click)="!(NonCLickButton2 = !NonCLickButton2)"  
+        >
+          Opravit dni
+        </mat-button-toggle>
+        
         </div>
 
         <div class="special">
@@ -179,6 +230,7 @@
             >Potvrdit doplnok</mat-button-toggle
           >
           <mat-button-toggle id="back1" (click)="back1()"
+          (click)="!(ClickHideButton1 = !ClickHideButton1)"
             >zmazat special</mat-button-toggle
           >
         </mat-button-toggle-group>
@@ -191,13 +243,13 @@
       >
       <div class="btn-clear-sumar">
         <mat-button-toggle-group multiple>
-          <mat-button-toggle id="back2" (click)="back2()"
+          <mat-button-toggle id="back2" (click)="back1()" (click)="back2()"
+          (click)="!(ClickHideButton1 = !ClickHideButton1)"
+          (click)="!(ClickHideButton2 = !ClickHideButton2)"
             >zmazat sumar</mat-button-toggle
           >
           <mat-button-toggle
             id="clear"
-            (click)="!(ClickHideButton1 = !ClickHideButton1)"
-            (click)="!(ClickHideButton2 = !ClickHideButton2)"
             (click)="refresh()"
             >zmazat vsetko</mat-button-toggle
           >

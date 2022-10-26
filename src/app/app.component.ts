@@ -13,6 +13,8 @@ export class AppComponent {
   inboundClick = true || false;
   ClickHideButton1 = true || false;
   ClickHideButton2 = true || false;
+  NonClickButton = true || false;
+  NonCLickButton2 = true || false;
 
   // for showing in input
   toShowSumarTotal = '';
@@ -38,6 +40,14 @@ export class AppComponent {
 
   back2() {
     this.toShowSumarTotal = '';
+  }
+
+  back3(){
+    this.toShow = '';
+    this.curVal = '';
+  }
+  back4(){
+    
   }
 
   // calculating values
