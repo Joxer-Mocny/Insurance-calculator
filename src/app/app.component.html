@@ -35,7 +35,7 @@
       <div class="packages">
         <section [hidden]="!inboundClick">
           <mat-card style="background-color: grey; color: black"
-            >Baliky</mat-card
+            >Balíky</mat-card
           >
           <p [hidden]="!NonClickButton">
             <mat-button-toggle
@@ -43,7 +43,7 @@
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('1.2')"
-              >Zakladny balik = 1.2€ /den</mat-button-toggle
+              >Zakladný balík = 1.2€ /den</mat-button-toggle
             >
 
             <mat-button-toggle
@@ -51,14 +51,14 @@
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('1.8')"
-              >rozsireny balik = 1.8€/den</mat-button-toggle
+              >rozširený balík = 1.8€/den</mat-button-toggle
             >
             <mat-button-toggle
               type="button"
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('2.4')"
-              >extra balik = 2.4€/den</mat-button-toggle
+              >extra balík = 2.4€/den</mat-button-toggle
             >
           </p>
           <p [hidden]="NonClickButton">
@@ -67,14 +67,14 @@
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="back3()"
-              >Zmazat balik</mat-button-toggle
+              >Zmazať balík</mat-button-toggle
             >
           </p>
         </section>
         <!-- year packages -->
         <section [hidden]="inboundClick">
           <mat-card style="background-color: grey; color: black"
-            >Baliky</mat-card
+            >Balíky</mat-card
           >
           <p [hidden]="!NonClickButton">
             <mat-button-toggle
@@ -82,21 +82,21 @@
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('39')"
-              >Zakladny Balik = 39€</mat-button-toggle
+              >Základný balík = 39€</mat-button-toggle
             >
             <mat-button-toggle
               type="button"
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('49')"
-              >Rozsireny Balik = 49€</mat-button-toggle
+              >Rozšírený balík = 49€</mat-button-toggle
             >
             <mat-button-toggle
               type="button"
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('59')"
-              >Zakladny Balik = 59€</mat-button-toggle
+              >Základný balík = 59€</mat-button-toggle
             >
           </p>
           <p [hidden]="NonClickButton">
@@ -105,23 +105,23 @@
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="back3()"
-              >Zmazat balik</mat-button-toggle
+              >Zmazať balík</mat-button-toggle
             >
           </p>
         </section>
         <!-- How much people -->
         <div class="People">
           <mat-card style="background-color: grey; color: black"
-            >Pocet ludi</mat-card
+            >Počet ludí</mat-card
           >
           <mat-button-toggle (click)="writeToInput('*1')"
-            >Jeden clovek</mat-button-toggle
+            >Jeden človek</mat-button-toggle
           >
           <mat-button-toggle (click)="writeToInput('*2')"
-            >Dva ludia</mat-button-toggle
+            >Dva ľudia</mat-button-toggle
           >
           <mat-button-toggle (click)="writeToInput('*3')"
-            >Traja ludia</mat-button-toggle
+            >Traja ľudia</mat-button-toggle
           >
         </div>
         <!-- how much days -->
@@ -138,7 +138,7 @@
                     class="more-styles"
                     (click)="!(NonCLickButton2 = !NonCLickButton2)"
                     (click)="writeToInput('*')"
-                    >Pocet dni</mat-button-toggle
+                    >Počet dni</mat-button-toggle
                   >
                 </mat-button-toggle-group>
               </div>
@@ -148,7 +148,7 @@
                     type="button"
                     class="more-styles"
                     (click)="!(NonCLickButton2 = !NonCLickButton2)"
-                    >Pocet dni</mat-button-toggle
+                    >Počet dni</mat-button-toggle
                   >
                 </mat-button-toggle-group>
               </div>
@@ -193,14 +193,14 @@
             type="button"
             class="more-styles"
             (click)="show()"
-            >Potvrdit balik</mat-button-toggle
+            >Potvrdiť balík</mat-button-toggle
           >
           <mat-button-toggle
             [hidden]="!inboundClick"
             id="back"
             (click)="back()"
           >
-            zmazat
+            ZMAZAŤ
           </mat-button-toggle>
           <mat-button-toggle
             [hidden]="!inboundClick"
@@ -209,7 +209,7 @@
             class="more-styles"
             (click)="!(NonCLickButton2 = !NonCLickButton2)"
           >
-            Opravit dni
+            Opraviť dni
           </mat-button-toggle>
         </div>
         <!-- Extra for days -->
@@ -220,13 +220,13 @@
             >
             <mat-button-toggle-group>
               <mat-button-toggle (click)="writeToInputSpec('*0.5')"
-                >storno cesty +50%</mat-button-toggle
+                >Storno cesty +50%</mat-button-toggle
               >
               <mat-button-toggle (click)="writeToInputSpec('*0.3')"
-                >sportove aktivity +30%</mat-button-toggle
+                >Športové aktivity +30%</mat-button-toggle
               >
               <mat-button-toggle (click)="writeToInputSpec('*0.8')">
-                storno cesty + sportove aktivity +80%
+                Storno cesty + športové aktivity +80%
               </mat-button-toggle>
             </mat-button-toggle-group>
           </p>
@@ -243,10 +243,10 @@
               >storno cesty +20%</mat-button-toggle
             >
             <mat-button-toggle (click)="writeToInputSpec('*0.1')"
-              >sportove aktivity 10%</mat-button-toggle
+              >Športové aktivity 10%</mat-button-toggle
             >
             <mat-button-toggle (click)="writeToInputSpec('*0.3')">
-              storno cesty + sportove aktivity +30%
+              Storno cesty + športové aktivity +30%
             </mat-button-toggle>
           </mat-button-toggle-group>
         </p>
@@ -255,13 +255,13 @@
             (click)="!(ClickHideButton1 = !ClickHideButton1)"
             id="Showsumar"
             (click)="showSumar()"
-            >Potvrdit doplnok</mat-button-toggle
+            >Potvrdiť doplnok</mat-button-toggle
           >
           <mat-button-toggle
             id="back1"
             (click)="back1()"
             (click)="!(ClickHideButton1 = !ClickHideButton1)"
-            >zmazat special</mat-button-toggle
+            >Zmazať Špecial</mat-button-toggle
           >
         </mat-button-toggle-group>
       </div>
@@ -279,10 +279,10 @@
             (click)="back2()"
             (click)="!(ClickHideButton1 = !ClickHideButton1)"
             (click)="!(ClickHideButton2 = !ClickHideButton2)"
-            >zmazat sumar</mat-button-toggle
+            >Zmazať sumár</mat-button-toggle
           >
           <mat-button-toggle id="clear" (click)="refresh()"
-            >zmazat vsetko</mat-button-toggle
+            >Zmazať všetko</mat-button-toggle
           >
         </mat-button-toggle-group>
       </div>
@@ -293,7 +293,7 @@
     <div class="ShowSumar">
       <mat-card style="background-color: grey; color: black"
         ><h1>
-          Zakladne baliky
+          Základné baliky
           <div>
             <input [(ngModel)]="toShow" name="days" type="text" />
           </div></h1
