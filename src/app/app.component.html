@@ -1,36 +1,35 @@
-
-<mat-grid-list cols="2" rowHeight="1:1" >
+<mat-grid-list cols="2" rowHeight="1:1">
   <mat-grid-tile>
     <div class="mycalc">
-        <!-- change buttons between years and days -->
-        <div [hidden]="!inboundClick" class="btnyear">
-          <mat-button-toggle
-            type="button"
-            class="more-styles"
-            (click)="!(inboundClick = !inboundClick)"
-          >
-            Na rok
-          </mat-button-toggle>
-        </div>
-        <div [hidden]="inboundClick" class="btnyear">
-          <mat-button-toggle
-            type="button"
-            class="more-styles"
-            (click)="!(inboundClick = !inboundClick)"
-          >
-            Na dni
-          </mat-button-toggle>
-        </div>
-        <p [hidden]="!inboundClick">
-          <mat-card style="background-color: grey; color: black"
-            >Sumar na dni</mat-card
-          >
-        </p>
-        <p [hidden]="inboundClick">
-          <mat-card style="background-color: grey; color: black"
-            >Sumar na rok</mat-card
-          >
-        </p>
+      <!-- change buttons between years and days -->
+      <div [hidden]="!inboundClick" class="btnyear">
+        <mat-button-toggle
+          type="button"
+          class="more-styles"
+          (click)="!(inboundClick = !inboundClick)"
+        >
+          Na rok
+        </mat-button-toggle>
+      </div>
+      <div [hidden]="inboundClick" class="btnyear">
+        <mat-button-toggle
+          type="button"
+          class="more-styles"
+          (click)="!(inboundClick = !inboundClick)"
+        >
+          Na dni
+        </mat-button-toggle>
+      </div>
+      <p [hidden]="!inboundClick">
+        <mat-card style="background-color: grey; color: black"
+          >Sumár na dni</mat-card
+        >
+      </p>
+      <p [hidden]="inboundClick">
+        <mat-card style="background-color: grey; color: black"
+          >Sumár na rok</mat-card
+        >
+      </p>
       <!-- Days packages -->
       <div class="packages">
         <section [hidden]="!inboundClick">
@@ -43,7 +42,7 @@
               class="more-styles"
               (click)="!(NonClickButton = !NonClickButton)"
               (click)="writeToInput('1.2')"
-              >Zakladný balík = 1.2€ /den</mat-button-toggle
+              >Základný balík = 1.2€ /den</mat-button-toggle
             >
 
             <mat-button-toggle
@@ -232,7 +231,7 @@
           </p>
         </div>
       </div>
-       <!-- Extra for years -->
+      <!-- Extra for years -->
       <div class="special">
         <p [hidden]="inboundClick">
           <mat-card style="background-color: grey; color: black"
