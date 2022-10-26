@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { __values } from 'tslib';
+
+
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,7 @@ export class AppComponent {
   curVal = '';
   curValSpec = '';
   curValSpecTotal = '';
+  gridByBreakpoint: any;
   // for deleting stuff
 
   refresh(): void {
@@ -42,12 +45,9 @@ export class AppComponent {
     this.toShowSumarTotal = '';
   }
 
-  back3(){
+  back3() {
     this.toShow = '';
     this.curVal = '';
-  }
-  back4(){
-    
   }
 
   // calculating values
@@ -75,4 +75,7 @@ export class AppComponent {
     this.curValSpecTotal = this.curValSpec + this.curVal;
     this.toShowSumarTotal = this.curValSpecTotal;
   }
+
+
+
 }

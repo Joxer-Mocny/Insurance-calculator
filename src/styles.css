@@ -3,8 +3,11 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mycalc{
-    text-align: center;
-    margin: 0em auto 2em;
-    max-width:  48em;
-    display: grid;
-  }
+  text-align: center;
+  margin: 0em auto 0em;
+  max-width:  48em;
+  display: grid;
+}
+
+
+
